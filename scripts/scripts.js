@@ -41,7 +41,7 @@ $(document).ready(function() {
         });
     });    
     
-    $("#tweet").on("click", function(e) {
+    $("#get-tweet").on("click", function(e) {
         e.preventDefault();
         window.open("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + data.content + "-" + data.title);
     });
