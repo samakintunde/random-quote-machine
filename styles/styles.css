@@ -1,0 +1,144 @@
+body {
+    width: 80%;
+    margin: auto;
+    background-color: #000000;
+}
+
+header h1 {
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    color: #2894F4;
+    padding: 20px 0 20px 0;
+}
+
+header {
+    border-bottom: #ffffff 2px;
+}
+
+#quote-box {
+    background-color: #202020;
+    border: 3px solid #ffffff;
+    height: auto;
+    padding: 20px;
+}
+
+.quotes-link {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    width: 100px;
+    padding: 5px 10px 5px 10px;
+    border: 3px solid #ffffff;
+    font-family: montserrat, sans-serif;
+}
+
+.quotes-link:hover {
+    font-weight: bold;
+}
+
+#content {
+    font-family: sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#author {
+    text-align: center;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.button {
+    padding: 10px 0 10px 0;
+}
+
+button {
+    background-color: #202020;
+}
+
+#new-quote {
+    float: right;
+    text-align: center;
+}
+
+#get-quote {
+    color: #2894F4;
+}
+
+#tweet {
+    float: left;
+    text-align: center;
+    color: #ffffff;
+}
+
+.fa-twitter {
+    color: #2C96F4;
+    padding-right: 10px;
+}
+
+.fa-github {
+    color: #ffffff;
+    padding-right: 10px;
+}
+
+.fa-heart {
+    color: #D81313;
+}
+
+.fa-codepen {
+    color: #ffffff;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.fa-github:hover {
+    color: #2894F4;
+}
+
+.fa-codepen:hover {
+    color: #2894F4;
+    
+}
+
+footer {
+    top: 90vh;
+    clear: both;
+    padding-top: 20px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #new-quote, #tweet {
+        float: none;
+        padding: 5px 0 5px 0;
+        
+    }
+
+    #get-quote, #tweet-quote {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #content {
+        font-size: 18px;
+    }
+
+    #author {
+        font-size: 12px;
+        color: #2894F4;
+    }
+}
