@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var swatch = [
+    let swatch = [
         '#FFAAAA',
         '#550000',
         '#9974AA',
@@ -36,6 +36,10 @@ $(document).ready(function() {
                 var post = data.shift();
                 $('#author').text("-" + post.title);
                 $('#content').html('"' + post.content + '"');
+                for(let i = 0; i < swatch.length; i++) {
+                    body.style.backgroundColor = i;
+                }
+                
             },
             cache: false,
         });
@@ -43,6 +47,11 @@ $(document).ready(function() {
     
     $("#get-tweet").on("click", function(e) {
         e.preventDefault();
-        window.open("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + data.content + "-" + data.title);
+        if(post.title) {
+            window.open("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + data.content + "-" + data.title);
+        }
+        else {
+            alert("No quote here!");
+        }
     });
 });
