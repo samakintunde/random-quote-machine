@@ -1,144 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Karla:700");
+
 body {
-    width: 80%;
-    margin: auto;
-    background-color: #000000;
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  outline: none;
+  font-family: Montserrat, arial;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 0.5em;
+  width: 7.5em;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 header h1 {
-    font-family: Montserrat, sans-serif;
-    text-align: center;
-    color: #2894F4;
-    padding: 20px 0 20px 0;
+  font-family: Karla, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #2894f4;
+  margin-bottom: 2em;
 }
 
-header {
-    border-bottom: #ffffff 2px;
+/* Main app area */
+main {
+  background: #ffffff;
+  border-radius: 0.75em;
+  width: 90%;
+  margin-bottom: 2em;
 }
 
+/* Copy button */
+main span i.fas {
+  float: right;
+  margin: 0.25em;
+  color: #ffffff;
+  font-size: 1.25em;
+  background-color: #000000;
+  border-radius: 3px 0.5em 3px 3px;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+/* Copy button */
+main span i.fas:hover {
+  background-color: #888888;
+}
+
+/* Container for quotes and their authors */
 #quote-box {
-    background-color: #202020;
-    border: 3px solid #ffffff;
-    height: auto;
-    padding: 20px;
-}
-
-.quotes-link {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    width: 100px;
-    padding: 5px 10px 5px 10px;
-    border: 3px solid #ffffff;
-    font-family: montserrat, sans-serif;
-}
-
-.quotes-link:hover {
-    font-weight: bold;
+  color: #333333;
+  min-height: 10em;
+  height: auto;
+  padding: 2em 1em;
+  width: 100%;
 }
 
 #content {
-    font-family: sans-serif;
-    font-size: 24px;
-    text-align: center;
-    color: #ffffff;
+  font-family: Karla, sans-serif;
+  font-size: 24px;
+  text-align: center;
 }
 
 #author {
-    text-align: center;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-style: italic;
+  margin-top: 1em;
+  text-align: center;
+  font-family: sans-serif;
+  font-style: italic;
 }
 
-.button {
-    padding: 10px 0 10px 0;
+/* Button Area */
+div.button {
+  display: flex;
+  justify-content: space-between;
 }
 
-a #tweet-quote {
-    background-color: #202020;
+/* Get Quote Button */
+button#get-quote {
+  color: #ffffff;
+  background-color: #37eb4f;
+  border-bottom-right-radius: 0.75em;
 }
 
-#new-quote {
-    float: right;
-    text-align: center;
+button#get-quote:hover {
+  background-color: #1bcc41;
 }
 
-#get-quote {
-    color: #2894F4;
+/* Tweet Quote Button */
+button#tweet-quote {
+  background-color: #2894f4;
+  float: left;
+  text-align: center;
+  border-bottom-left-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#tweet {
-    float: left;
-    text-align: center;
-    color: #ffffff;
-}
-
-.fa-twitter {
-    color: #2C96F4;
-    padding-right: 10px;
-}
-
-.fa-github {
-    color: #ffffff;
-    padding-right: 10px;
-}
-
-.fa-heart {
-    color: #D81313;
-}
-
-.fa-codepen {
-    color: #ffffff;
-    font-size: 30px;
-    padding-left: 10px;
-}
-
-.fa-github:hover {
-    color: #2894F4;
-}
-
-.fa-codepen:hover {
-    color: #2894F4;
-    
+button#tweet-quote:hover {
+  background-color: #117cda;
 }
 
 footer {
-    top: 90vh;
-    clear: both;
-    padding-top: 20px;
-    font-family: Montserrat, sans-serif;
-    text-align: center;
-    color: #ffffff;
+  text-align: center;
+  margin: 2em 0;
+  font-family: Montserrat, sans-serif;
+  color: #ffffff;
 }
 
-@media (max-width: 800px) {
-    body {
-        width: 100%;
-    }
+footer .my-name {
+  color: white;
+  text-decoration: underline #117cda;
+}
 
-    h1 {
-        font-size: 24px;
-    }
+footer .fa-heart {
+  color: #ff3d3d;
+}
 
-    #new-quote, #tweet {
-        float: none;
-        padding: 5px 0 5px 0;
-        
-    }
+footer div a {
+  color: #aaaaaa;
+  margin: 0 1em;
+  font-size: 1.5em;
+  transition: 0.2s;
+}
 
-    #get-quote, #tweet-quote {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-    }
+footer div a:hover {
+  color: #ffffff;
+}
 
-    #content {
-        font-size: 18px;
-    }
+@media (max-width: 520px) {
+  body {
+    width: 100%;
+  }
 
-    #author {
-        font-size: 12px;
-        color: #2894F4;
-    }
+  h1 {
+    font-size: 24px;
+  }
+  #get-quote,
+  #tweet-quote {
+    width: 100%;
+  }
 }
